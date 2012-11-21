@@ -89,7 +89,7 @@
         checkExpand: function() {
             
             if (this.dummy === null) {
-                this.dummy = jQuery('<div></div>');
+                this.dummy = jQuery('<div class="jquery-autogrow" data-name="' + this.textarea.attr('name') + '"></div>');
                 this.dummy.css({
                     'font-size'  : this.textarea.css('font-size'),
                     'font-family': this.textarea.css('font-family'),
