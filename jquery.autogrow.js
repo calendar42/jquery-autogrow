@@ -149,12 +149,13 @@
                         this.textarea.animate({height: height + 'px'}, 100);
                     }
                 }
+                if (this.expand_callback) {
+                    var self = this;
+                    self.expand_callback(height);
+                    // window.setTimeout(function(){self.expand_callback(height);},500);
+                }
             }
             
-            if (this.expand_callback) {
-                var self = this;
-                window.setTimeout(function(){self.expand_callback();},500);
-            }
         }
                          
      });
